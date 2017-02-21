@@ -1,0 +1,25 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#box {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+.table > tbody > tr > td {
+     vertical-align: middle;
+}
+.edit {
+	text-align: right;
+}
+.edit a {
+	text-decoration: none;
+}
+.editor input {
+	margin: 15px 0 15px 0;
+}
+.editor .btn {
+	width: 100px;
+}
