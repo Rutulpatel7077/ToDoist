@@ -51,7 +51,7 @@
 	)";
 
 	if (mysqli_query($con, $query)) 
-		echo "<br>-- Todo Table created successfully";
+		echo "<br>--  Todo Table created successfully";
 	else
 		echo "<br>Error creating database: " . mysqli_error($con);
 

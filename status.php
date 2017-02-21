@@ -27,7 +27,7 @@
 	else
 		echo "Error!";
 
-	if ($status == "1") {
+	if ($status == "1")  {
 		$query = "UPDATE todos SET todostatus = 1
 		WHERE userid = '$userid' AND todoid = '$todoid'";
 

@@ -4,7 +4,7 @@
  * Description : this is main page of todoist in this page we can see all the todo
  * STUEDENT NAME = RUTUL PATEL
  * STUDENT NUMBER : 200335158
- * AUTHOR NAME : RUTUL PATEL
+ * AUTHOR NAME :  RUTUL PATEL
  * WEBSITE : TODOIST
  * ASSIGNMENT 1 
  */

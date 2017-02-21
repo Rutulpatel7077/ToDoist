@@ -1,9 +1,9 @@
 
 <!-- /** FileName = index.php
   Description :  this is inedx.php to show GUI in html for the user
- * STUEDENT NAME = RUTUL PATEL
+ * STUEDENT NAME  = RUTUL PATEL
  * STUDENT NUMBER : 200335158
- * AUTHOR NAME : RUTUL PATEL
+ * AUTHOR NAME : RUTUL PATEl
  * WEBSITE : TODOIST
  * ASSIGNMENT 1 
  *

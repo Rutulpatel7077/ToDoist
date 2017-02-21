@@ -4,7 +4,7 @@
  *  Description : this is log in page of todoist
  * STUEDENT NAME = RUTUL PATEL
  * STUDENT NUMBER : 200335158
- * AUTHOR NAME : RUTUL PATEL
+ * AUTHOR NAME :  RUTUL PATEL
  * WEBSITE : TODOIST
  * ASSIGNMENT 1 
  */
