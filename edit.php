@@ -3,7 +3,7 @@
 
 /**  FileName = Edit.PHP
  *	Description :  this is edit page for the todoist this page will edit todonotes in the database.
- * 	STUEDENT NAME = RUTUL PATE
+ * 	STUEDENT NAME = RUTUL PATEL
  * 	STUDENT NUMBER : 200335158
  * 	AUTHOR NAME : RUTUL PATEL
  * 	WEBSITE : TODOIST
@@ -12,26 +12,28 @@
 
 
 	session_start();
-	include("connection.php");
+	include("connection.php");  // this is for connection with databse.
 	$error = 0;
 
-	$userid = $_SESSION["userid"];
+	$userid = $_SESSION["userid"];    // get user id for session log in
 	$todoid = $_GET['todoid'];
 	$username = $_SESSION["username"];
 
-	$query = "SELECT * FROM todos 
+	// this is query for databse to get data  for the user
+	$query = "SELECT * FROM todos     
 	WHERE userid = '$userid' AND todoid = '$todoid'";
 	$result = mysqli_query($con, $query);
+
 
 	if (mysqli_num_rows($result) > 0) 
 		$row =  mysqli_fetch_assoc($result);
 	else
 		echo "Error!";
-
+     // when edit button is pressed update database for todoname and todonotes
 	if (isset($_POST['edit'])) {
 		$todoname = $_POST['todoname'];
 		$todonotes = $_POST['todonotes'];
-
+    // display error if todoname or todonotes name is empty
 		if ($todoname == "") 
 			$error = 1;
 		elseif ($todonotes == "") 
@@ -39,7 +41,7 @@
 		else {
 			$query = "UPDATE todos SET todoname = '$todoname'
 			WHERE userid = '$userid' AND todoid = '$todoid'";
-
+            // header for location todonotes.php
 			if (mysqli_query($con, $query)) 
 				header("Location: todo.php");
 			else
@@ -54,12 +56,12 @@
 				echo "Error : " . mysqli_error($con);
 		}
 	}
-
+    // if delete button press  this is isset for delete query for database
 	if (isset($_POST['delete'])) {
 		$query = "DELETE FROM todos
 		WHERE userid = '$userid' AND todoid = '$todoid'";
 
-		if (mysqli_query($con, $query)) 
+		if (mysqli_query($con, $query))
 			header("Location: todo.php");
 		else
 			echo "Error : " . mysqli_error($con);
@@ -67,6 +69,7 @@
 
 ?>
 
+<!--html GUI for index-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -89,7 +92,7 @@
 
   </head>
   <body>
-    	
+<!--bootstrrap css design -->
     <div class="container">
 		<div class="navbar navbar-default">
 			<div class="container-fluid">
@@ -117,8 +120,10 @@
                 if ($error == 1) 
                     echo '<div class="alert alert-danger">Oops! Empty todo.</div>';
             ?>
+
         	<div class="row">
         		<div class="col-md-9">
+            <!-- this is form to save all todonotes and todoname -->
 		        	<form method="POST" action="">
 			            <input name="todoname" type="text" class="form-control" value="<?php echo $row['todoname']; ?>">  
 			            <textarea name="todonotes" class="form-control" rows="4"><?php echo $row['todonotes']; ?></textarea>  
@@ -141,4 +146,4 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
-</html>
+</html>  
