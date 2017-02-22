@@ -1,7 +1,7 @@
 <?php
 
-/** FileName = INSTALL.PHP
-	Description :  Please run install.php before run the any page it will make database for you!
+/**FileName = INSTALL.PHP
+ * Description :  Please run install.php before run the any page it will make database for you!
  * STUEDENT NAME = RUTUL PATEL
  * STUDENT NUMBER : 200335158
  * AUTHOR NAME : RUTUL PATEL
@@ -9,9 +9,7 @@
  * ASSIGNMENT 1 
  */
 
-
-
-
+//    this page will make database and users and todo tables for todoist
 
 	$dbname = "todo";
 	$dbhost = "ca-cdbr-azure-central-a.cloudapp.net";

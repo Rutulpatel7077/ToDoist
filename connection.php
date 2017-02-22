@@ -2,8 +2,8 @@
 <?php
 
 
-/** FileName = Connection.PHP
- *	Description : this is common connection file for all pages.
+/**FileName = Connection.PHP
+ * Description : this is common connection file for all pages.
  * STUEDENT NAME = RUTUL PATEL
  * STUDENT NUMBER : 200335158
  * AUTHOR NAME : RUTUL PATEL

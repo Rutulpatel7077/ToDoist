@@ -105,7 +105,7 @@
 					</button>
 					<a class="navbar-brand" href="index.php">Todoist</a>
 				</div>
-                
+        <!--nav bar for all pages-->
 				<div id="navbar" class="navbar-collapse collapse">					
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="todo.php">All Todos</a></li>
@@ -146,4 +146,4 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
-</html>  
+</html>

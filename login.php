@@ -1,22 +1,22 @@
 <?php
 
-/** FileName = LOGIN.PHP
- *  Description : this is log in page of todoist
+/**FileName = LOGIN.PHP
+ * Description : this is log in page of todoist
  * STUEDENT NAME = RUTUL PATEL
  * STUDENT NUMBER : 200335158
  * AUTHOR NAME :  RUTUL PATEL
  * WEBSITE : TODOIST
  * ASSIGNMENT 1 
  */
-    session_start();
+    session_start();  // session start for Todist so we do not need to put user id and password everytimes
     include("connection.php");
     $error = 0;
-
+    // this is isset for the login button
     if (isset($_POST['login'])) {
 
         $username = $_POST['username'];
         $password = $_POST['password'];
-
+    // throw error if username and password is empty
         if ($username == "") 
             $error = 1;
         elseif ($password == "") 
@@ -26,7 +26,7 @@
             WHERE username = '$username' AND password = '$password'";
 
             $result = mysqli_query($con, $query);
-
+        // if user name and password is mactch from any row then send to the todo.php
             if (mysqli_num_rows($result) > 0) {
                 $row =  mysqli_fetch_assoc($result);
                 $_SESSION["userid"] = $row["userid"];

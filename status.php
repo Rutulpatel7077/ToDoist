@@ -1,7 +1,7 @@
 <?php
 	
 /** FileName = status.php
- *	Description : this page will update all the todo status into database todoist
+ *	Description : this page will update all the todo status specially checkbox into database  todoist
  * STUEDENT NAME = RUTUL PATEL
  * STUDENT NUMBER : 200335158
  * AUTHOR NAME : RUTUL PATEL
@@ -26,7 +26,7 @@
 		$row =  mysqli_fetch_assoc($result);
 	else
 		echo "Error!";
-
+    // this update query will update database onClick to the checkbox
 	if ($status == "1")  {
 		$query = "UPDATE todos SET todostatus = 1
 		WHERE userid = '$userid' AND todoid = '$todoid'";

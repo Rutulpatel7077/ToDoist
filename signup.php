@@ -1,7 +1,7 @@
 <?php
     
-/** FileName = SIGNUP.PHP
- *  Description : this is signup page for todoist
+/**FileName = SIGNUP.PHP
+ * Description : this is signup page for todoist
  * STUEDENT NAME = RUTUL PATEL
  * STUDENT NUMBER : 200335158
  * AUTHOR NAME : RUTUL PATEL
@@ -11,7 +11,7 @@
     session_start();
     include("connection.php");
     $error = 0;
-
+ // this is post method for signup form to insert data in the database
     if (isset($_POST['signup'])) {
 
         $username = $_POST['username'];
@@ -22,6 +22,7 @@
         elseif ($password == "") 
             $error = 1;
         else {
+//            Insert data into username and password in user table
             $query = "INSERT INTO users (username, password)
             VALUES ('$username', '$password')";
 
@@ -32,7 +33,7 @@
 
                 $result = mysqli_query($con, $query);
                 $row =  mysqli_fetch_assoc($result);
-                
+                // if user id and username is match from the database then send to todo.php
                 $_SESSION["userid"] = $row["userid"];
                 $_SESSION["username"] = $row["username"];
                 header("Location: todo.php");
@@ -54,6 +55,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- This is custom css for specific GUI-->
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -65,7 +67,7 @@
 
   </head>
   <body>
-    	
+<!-- CSS bootstrap container-->
     <div class="container">
 		<div class="navbar navbar-default">
 			<div class="container-fluid">
@@ -96,7 +98,7 @@
                     </div>
 
                     <div class="panel-body">
-
+                <!-- error code for the when code = 1 -->
                         <?php 
                             if ($error == 1) 
                                 echo '<div class="alert alert-danger">Invalid Username or Password!</div>';

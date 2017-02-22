@@ -84,9 +84,10 @@
         
         <table class="table table-striped">
         <?php
-            if (mysqli_num_rows($result) > 0) {     
+            if (mysqli_num_rows($result) > 0) {
+//                This while loop insert all the data of todo into the the table
                 while($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>";
+                    echo "<tr>";  // tr start tag
                         $todoid = $row["todoid"];
                         if ($row["todostatus"] == 1) {
                             echo "<td><input type='checkbox' checked onclick='check(this);' id='$todoid' name='todostatus' value=''/></td>";
@@ -97,7 +98,7 @@
                             echo "<td>" . $row["todoname"] . "</td>";
                         }
                         echo "<td class='edit'><a href='edit.php?todoid=$todoid'><span class='glyphicon glyphicon-edit'></span> Edit</a></td>";
-                    echo "</tr>";
+                    echo "</tr>";  // tr end tag
                 }
             } else {
                 echo "Nothing yet";
@@ -121,10 +122,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
+<!-- java script for the checkbox onClick-->
     <script type="text/javascript">
         function check(checkbox)  {
             var id = $(checkbox).attr('id');
+// check box status = 1 when check and status = 0 when uncheck
             if($(checkbox).is(":checked"))
                 window.location.href = "status.php?todoid=" + id + "&status=1";
             else

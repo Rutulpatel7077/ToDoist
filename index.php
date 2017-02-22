@@ -1,6 +1,6 @@
 
 <!-- /** FileName = index.php
-  Description :  this is inedx.php to show GUI in html for the user
+ * Description :  this is inedx.php to show GUI in html for the user
  * STUEDENT NAME  = RUTUL PATEL
  * STUDENT NUMBER : 200335158
  * AUTHOR NAME : RUTUL PATEl
@@ -19,6 +19,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- custom CSS for special updates -->
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
