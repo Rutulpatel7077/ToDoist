@@ -56,7 +56,7 @@
 
 		<div class="jumbotron">
 			<h1>Welcome to Todoist</h1>
-			<p>A simple way to maintain a todo list</p>
+			<p>A simple way to maintain your notes for your work</p>
 			<p><a class="btn btn-lg btn-primary" href="signup.php">Sign Up Now!</a></p>
 		</div>
 
