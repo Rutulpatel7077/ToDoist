@@ -17,7 +17,7 @@
     if (isset($_POST['add'])) {
         $todoname = $_POST['todoname'];
         if ($todoname == "") 
-            echo "Please Enter Todo";
+            echo "Please Enter Todo" . mysqli_error($con);
         else {
             $query = "INSERT INTO todos (todoname, userid)
             VALUES ('$todoname', '$userid')";
@@ -123,6 +123,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 <!-- java script for the checkbox onClick-->
+    
     <script type="text/javascript">
         function check(checkbox)  {
             var id = $(checkbox).attr('id');
