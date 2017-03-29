@@ -36,7 +36,7 @@
                 // if user id and username is match from the database then send to todo.php
                 $_SESSION["userid"] = $row["userid"];
                 $_SESSION["username"] = $row["username"];
-                header("Location: todo.php");
+                header("Location: login.php");
             } 
             else
                 $error = 1;
